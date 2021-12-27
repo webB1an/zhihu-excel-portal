@@ -54,6 +54,71 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
+  {
+    path: '/keyboard',
+    component: Layout,
+    redirect: '/keyboard/search',
+    children: [{
+      path: 'search',
+      name: 'KeyboardSearch',
+      component: () => import('@/views/keyboard/search'),
+      meta: { title: '键盘', icon: 'keyboard' }
+    }, {
+      path: 'detail',
+      hidden: true,
+      name: 'KeyboardDetail',
+      component: () => import('@/views/keyboard/detail'),
+      meta: { title: '键盘详情', icon: 'keyboard' }
+    }]
+  },
+
+  {
+    path: '/keyboard1',
+    component: Layout,
+    redirect: '/keyboard1/search',
+    children: [{
+      path: 'search',
+      name: 'KeyboardSearch1',
+      component: () => import('@/views/keyboard1/search'),
+      meta: { title: '键盘1', icon: 'keyboard' }
+    }, {
+      path: 'detail',
+      hidden: true,
+      name: 'KeyboardDetail1',
+      component: () => import('@/views/keyboard1/detail'),
+      meta: { title: '详情', icon: 'keyboard' }
+    }, {
+      path: 'editor',
+      hidden: true,
+      name: 'KeyboardEditor',
+      component: () => import('@/views/keyboard1/editor'),
+      meta: { title: '编辑', icon: 'keyboard' }
+    }, {
+      path: 'add',
+      hidden: true,
+      name: 'KeyboardAdd',
+      component: () => import('@/views/keyboard1/add'),
+      meta: { title: '编辑', icon: 'keyboard' }
+    }]
+  },
+
+  {
+    path: '/keychron',
+    component: Layout,
+    redirect: '/keychron/search',
+    children: [{
+      path: 'search',
+      name: 'KeychronSearch',
+      component: () => import('@/views/keychron/search'),
+      meta: { title: '京造键盘', icon: 'keyboard' }
+    }, {
+      path: 'detail',
+      hidden: true,
+      name: 'KeychronDetail',
+      component: () => import('@/views/keychron/detail'),
+      meta: { title: '键盘详情', icon: 'keyboard' }
+    }]
+  },
 
   {
     path: '/example',

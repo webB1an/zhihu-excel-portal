@@ -9,3 +9,9 @@ export default {
   name: 'App'
 }
 </script>
+
+<style>
+.mt20 {
+  margin-top: 20px;
+}
+</style>
